@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "yarn run tsc --project internal.tsconfig.json",
-    "postinstall": "patch-package > wang.txt"
+    "postinstall": "patch-package"
   },
   "files": [
     "dist",
