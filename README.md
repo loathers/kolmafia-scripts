@@ -25,9 +25,9 @@ Just run `yarn add --dev kolmafia-scripts` and then set up your `package.json` l
     }
 }
 ```
-
-| main    | should point to where you would like your compiled code to go |
+|         |                                                               |
 |---------|---------------------------------------------------------------|
+| main    | should point to where you would like your compiled code to go |
 | mainSrc | should point to the entrypoint to your uncompiled code        |
 
 Note: Installing `kolmafia` here (as shown above) is optional but recommended, especially for `TypeScript`.
