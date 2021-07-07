@@ -17,11 +17,11 @@ Just run `yarn add --dev kolmafia-scripts` and then set up your `package.json` l
         "watch": "kolmafia-scripts watch"
     },
     "devDependencies": {
-        "kolmafia-scripts": "^0.0.1",
-        "kolmafia": "^1.0.5"
+        "kolmafia-scripts": "^0.0.2",
+        "kolmafia": "^1.0.11"
     },
     "peerDependencies": {
-        "kolmafia": "^1.0.5"
+        "kolmafia": "^1.0.11"
     }
 }
 ```
