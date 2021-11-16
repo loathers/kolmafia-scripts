@@ -1,12 +1,7 @@
 #!/usr/bin/env node
-
-import spawn from "cross-spawn";
-import path from "path";
-
 import { run, watch } from "./webpack";
 
 const args = process.argv.slice(2);
-const execPath = process.execPath;
 
 function buildScript() {
   run();
@@ -16,22 +11,9 @@ function watchScript() {
   watch();
 }
 
-function postInstallScript() {
-  const patchesDir = path.relative(
-    process.cwd(),
-    path.join(__dirname, "../patches")
-  );
-  spawn.sync(
-    execPath,
-    ["node_modules/.bin/patch-package", "--patch-dir", patchesDir],
-    { stdio: "inherit" }
-  );
-}
-
 const scripts = {
   build: buildScript,
   watch: watchScript,
-  postinstall: postInstallScript,
 };
 
 const scriptIndex = args.findIndex((x) => Object.keys(scripts).includes(x));
